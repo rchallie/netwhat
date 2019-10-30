@@ -6,8 +6,8 @@
 ---
 
 #### > Masque de sous réseau
-Il Permet de distinguer la partie de l'adresse utilisée pour le routage et celle utilisable pour numéroter des interfaces (ordinateurs, imprimantes, etc..)\
-Étant codé sur 4 octets et comstitué d'une suite de 1 puis de 0, il y a 32 possibilité de masque 
+Il permet de distinguer la partie de l'adresse utilisée pour le routage et celle utilisable pour numéroter des interfaces (ordinateurs, imprimantes, etc..)\
+Étant codé sur 4 octets et constitué d'une suite de 1 puis de 0, il y a 32 possibilité de masque 
 - L'adresse de sous-réseau est obtenu en appliquand l'opérateur "ET" binaire entre l'adresse IP et le masque de sous-réseau
 
   > #### Exemple :
