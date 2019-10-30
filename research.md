@@ -1,6 +1,6 @@
 #### > IP (Internet protocol)
 - Identifie chaque appareil sur internet
-- Coder sur 4 octets (32 bits)
+- Coder sur <span style="color:orange">4 octets</span> (32 bits)
 
 #### > Masque de sous réseau
 - Permet de distinguer la partie de l'adresse utilisée pour le routage et celle utilisable pour numéroter des interfaces (ordinateurs, imprimantes, etc..)
