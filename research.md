@@ -3,6 +3,8 @@
 - Identifie chaque appareil sur internet
 - Coder sur 4 octets (32 bits)
 
+---
+
 #### > Masque de sous réseau
 Il Permet de distinguer la partie de l'adresse utilisée pour le routage et celle utilisable pour numéroter des interfaces (ordinateurs, imprimantes, etc..)\
 Étant codé sur 4 octets et comstitué d'une suite de 1 puis de 0, il y a 32 possibilité de masque 
@@ -40,6 +42,8 @@ En résumé :
 Ça signifie que les 19 premiers bits de l'adresse sont dédiés à l'adresse du sous-réseau et le reste à l'adresse de l'interface hôte à l'intérieur du réseau\
 _(Voir dans "UTILS" pour la liste des masques de sous réseau)_
 
+---
+
 ### UTILS
 #### > Convertion décimale vers binaire : 
 
@@ -59,6 +63,8 @@ On connais la traduction d'un nombre décimale en binaire, en soustraillant des 
 | 1                  | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   |
 | 2                  | 0   | 0   | 0   | 0   | 0   | 0   | 1   | 0   |
 
+---
+
 #### > Complément à un :
 
 Il s'agit d'ajouter traduire du décimale au binaire puis d'inverser tout les bits de 1 vers 0 et de 0 vers 1
@@ -67,3 +73,4 @@ Il s'agit d'ajouter traduire du décimale au binaire puis d'inverser tout les bi
   > Deviens :\
   > &nbsp;0 0 0 0 0 0 0 0 . 0 0 0 0 0 0 0 0 . 0 0 0 0 0 0 0  . 1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;1 1
 
+---
