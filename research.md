@@ -37,7 +37,7 @@ En résumé :
 | ---------------------- | --------------- |
 | La notation            | 91.198.174.2/19 |
 | désigne l'adresse IP   | 91.168.174.2    |
-| avec le masque         | 255.255.254.0   | 
+| avec le masque         | 255.255.224.0   | 
 | avec l'adress SR       | 91.168.160.0    |
 | et l'adress hôte       | 0.0.31.255      |
 
