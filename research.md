@@ -38,6 +38,8 @@ En résumé :
 | La notation            | 91.198.174.2/19 |
 | désigne l'adresse IP   | 91.168.174.2    |
 | avec le masque         | 255.255.254.0   | 
+| avec l'adress SR       | 91.168.160.0    |
+| et l'adress hôte       | 0.0.31.255      |
 
 Ça signifie que les 19 premiers bits de l'adresse sont dédiés à l'adresse du sous-réseau et le reste à l'adresse de l'interface hôte à l'intérieur du réseau\
 _(Voir dans "UTILS" pour la liste des masques de sous réseau)_
