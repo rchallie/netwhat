@@ -3,6 +3,34 @@
 - Identifie chaque appareil sur internet
 - Coder sur 4 octets (32 bits)
 
+##### > Les differentes classes d'IP :
+- Classe A : (gros réseau)
+  - 1 octet pour identifié le réseau
+  - 3 octets pour identifié les machines
+  - 16 777 214 adresses possible
+  - Commence toujours par la suite de bits 0, donc compris entre 0 et 127, mais certaines adresses sont réservées à des usages particuliers.
+  - Plage d'adresse de 0.0.0.0 à 127.255.255.255
+- Classe B : (réseau moyen)
+  - 2 octet pour identifié le réseau
+  - 2 octets pour identifié les machines
+  - 65535 adresses possible
+  - Commence toujours par la suite de bits 10, donc compris entre 128 et 191.
+  - Plage d'adresse de 128.0.0.0 à 191.255.255.255
+- Classe C : (réseau simple)
+  - 3 octet pour identifié le réseau
+  - 1 octets pour identifié les machines
+  - 256 adresses possible
+  - Commence toujours par la suite de bits 110, donc compris entre 192 et 223.
+  - Plage d'adresse de 192.0.0.0 à 223.255.255.255
+- Classe D : (multicast)
+  - Un émeteur vers plusieurs récepteurs
+  - Commence toujours par la suite de bits 1110, donc compris entre 224 et 239.
+  - Plage d'adresse de 225.0.0.0 à 239.255.255.255
+- Classe D : (multicast)
+  - Réserver à l'IANA
+  - Commence toujours par la suite de bits 1111, donc compris entre 240 et 255.
+  - Plage d'adresse de 240.0.0.0 à 255.255.255.255
+  
 ---
 
 #### > Masque de sous réseau
