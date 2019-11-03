@@ -51,6 +51,24 @@
 #### > IPv4 et IPv6 :
   - ##### IPv4: (Longueur de 32 bits soit 4 octets)
     La plage d'attribution s'étend de 0.0.0.0 à 255.255.255.255. Elle est prémunie contre la pénuerie d'adresse par la norme RFC 1918. L'obtention d'une de ces adresses se fait soit par l'attribution statique ou automatique. _(Voir dans "UTILS" pour l'expliaction des deux thermes)_
+  - ##### IPv6: (Longueur de 128 bits soit 16 octets)
+    - 2<sup>128 possibilités d'adresses unique
+    - 16 bits sous la forme de quatre chiffres héxadécimaux * 8 séparé par 2 points (":")
+    - 64 bits sont réserver pour l'adresse réseau et les 64 autres restent pour fournir des détails sur l'interface réseau de l'hôte
+  
+    > Exemple :
+    > 2001:0DB8:AC10:FE01:0000:0000:0000:0000\
+    > Soit :\
+    > 0010000000000001:0000110110111000:1010110000001000:1111111000000001:"Les zéros restent des zéro"
+  
+  - ##### Principales différences entre IPv4 et IPv6
+    - espaces d'adressage plus importants en IPv6
+    - IPv6 est fait pour rendre le transfert de paquets plus sécurisé
+    - Avec l'IPv6, pas de limites géographiques (Actuelement 50% des IP sont réservées au Etats-Unis (car créer par eux))
+    - Meilleurs fonctionnalités de multidiffusion dans le cas de l'IPv6
+    
+  - Objectifs sur le long therme:
+    - Passé de l'IPv4 à l'IPv6 (Se fait en douceur grâce au NAT et au CIDR)
 
 ---
 
@@ -59,12 +77,13 @@ Est une adresse par laquelle tout les appareils connectés au réseau peuvent re
 
 ##### > Différence entre IP privée et IP publique
   ##### - Privée :
-  Ces adresses ne sont par sur Internet mais seulement sur réseau privés. Elles renforcent la sécurité car n'étant pas directement relié à Internet mais à un routeur, lui relié à Internet. Pour les entreprises etc. elle permet de communiquer sans consommer d'adresses Publique ainsi, deux entreprises différentes qui ne sont pas raccordés ensemble peuvent avoir le même addressage. Pour permettre à une adresse privée d'accéder à Internet, l'adresse doit être traduite en adresse publique appelé NAT _(Voir dans "UTILS" pour la définition et les types)_
+  Ces adresses ne sont par sur Internet mais seulement sur réseau privés. Elles renforcent la sécurité car elles ne sont pas directement relié à Internet mais à un routeur, lui relié à Internet. Pour les entreprises etc. elle permet de communiquer sans consommer d'adresses Publique ainsi, deux entreprises différentes qui ne sont pas raccordés ensemble peuvent avoir le même addressage. Pour permettre à une adresse privée d'accéder à Internet, l'adresse doit être traduite en adresse publique appelé NAT _(Voir dans "UTILS" pour la définition et les types)_
   ##### - Publique :
   Ces adresses permetes aux ordinateurs du réseau de communiquer entre eux sur internet. Ces adresses sont fournis par le FAI (fournisseur d'accès à Internet) au moment de l'installation et de la synchronisation de la box. Chaques adresses sont unique au monde, non comprise dans la partie privée.\
-  Exceptions :\
-    - Le réseau 127.0.0.0 est réservé pour les tests de boucle local conne l'adresse IP 127.0.0.1 ("localhost") qui est une boucle local sur le PC.\
-    - Le réseau 0.0.0.0 est lui aussi réservé.
+    
+  ##### Exceptions :\
+      - Le réseau 127.0.0.0 est réservé pour les tests de boucle local conne l'adresse IP 127.0.0.1 ("localhost") qui est une boucle local sur le PC.\
+      - Le réseau 0.0.0.0 est lui aussi réservé.
 
 ---
 
@@ -112,6 +131,26 @@ En résumé :
 Ça signifie que les 19 premiers bits de l'adresse sont dédiés à l'adresse du sous-réseau et le reste à l'adresse de l'interface hôte à l'intérieur du réseau\
 _(Voir dans "UTILS" pour la liste des masques de sous réseau)_
 
+---
+
+#### TCP : (Transmission Conctrol Protocol) (Dans la langue de Molière : Protocole de contrôle de transmission)
+  Est un protocole de paquet fiable
+  
+  ##### Fonctionnement :
+    - Etablissement de la connextion
+    - Transfert de données
+    - Fin de connexion
+  
+  ##### Connexion entre les appareils :
+  En règle général un système ouvre une 'socket' (point d'accès à une connexion TCP) et se met en attente passive de connexion d'un autre système. On appel ça l'ouverture passive, utilisé par le côté serveur de la connexion.
+
+  ##### Transferts de données : (sécurité)
+    - Les numéros de séquence sont utilisés pour ordonner les segments TCP reçus et détecter les données perdues
+    - Les sommes de contrôle permettents la détection d'erreur
+    - Les acquittements et les temporisations permettent la détection des segments perdue ou retardés
+   
+<p><a href="https://commons.wikimedia.org/wiki/File:Tcp_talk.svg#/media/Fichier:Tcp_talk.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Tcp_talk.svg/1200px-Tcp_talk.svg.png" alt="Tcp talk.svg"></a><br>Par <a href="//commons.wikimedia.org/w/index.php?title=User:Skc&amp;action=edit&amp;redlink=1" class="new" title="User:Skc (page does not exist)">Sébastien Koechlin</a> — <span class="int-own-work" lang="fr">Travail personnel</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=16887951">Lien</a></p>
+  
 ---
 
 ### UTILS
