@@ -85,7 +85,7 @@ Est une adresse par laquelle tout les appareils connectés au réseau peuvent re
   Ces adresses permetes aux ordinateurs du réseau de communiquer entre eux sur internet. Ces adresses sont fournis par le FAI (fournisseur d'accès à Internet) au moment de l'installation et de la synchronisation de la box. Chaques adresses sont unique au monde, non comprise dans la partie privée.
     
   ##### Exceptions :
-  - Le réseau 127.0.0.0 est réservé pour les tests de boucle local conne l'adresse IP 127.0.0.1 ("localhost") qui est une boucle local sur le PC.\
+  - Le réseau 127.0.0.0 est réservé pour les tests de boucle local conne l'adresse IP 127.0.0.1 ("localhost") qui est une boucle local sur le PC.
   - Le réseau 0.0.0.0 est lui aussi réservé.
 
 ---
@@ -137,7 +137,8 @@ _(Voir dans "UTILS" pour la liste des masques de sous réseau)_
 ---
 
 ### TCP : (Transmission Conctrol Protocol) (Dans la langue de Molière : Protocole de contrôle de transmission)
-  Est un protocole de paquet fiable
+  Est un protocole de paquet fiable\
+  Il utilise un system de handshaking _(Voir dans "UTILS" pour la définition)_
   
 #### > Fonctionnement :
   - Etablissement de la connextion
@@ -166,6 +167,18 @@ Les applications multimédia (audio, vidéo), des jeux multi-joueurs en temps r�
   - UDP : est souvent utilisé pour le temps réel mais est moins fiable
   - SCTP : comme le TCP, mais permettant la communications multi-cibles comme l'UDP
   - MPTCP : surcouche de TCP, exploiter tous les chemins disponibles en parallèle, et donc améliorer significativement les performances et la fiabilité d'une connexion.
+  
+---
+  
+  ### > UDP : (User Datagram Protocol) (Protocole de datagramme utilisateur)
+  Permet l'échange entre deux utilisateur de manière symple, chacun définie par une adresse IP et un port. Il n'est pas nécessaire d'avoir une communication préalable n'est requise pour établir la connexion, contrairement du TCP qui utilise le handshaking _(Voir dans "UTILS" pour la définition)_. Les paquets envoyés en UDP sont préfixer d'une en-tête contenant l'adresse de destination, suffisant pour sont envoie.
+  
+  #### > Propriétés :
+  - Ne retient pas d'informations sur l'état des messages UDP. Il est définie comme un protocole non fiable
+  - "Orienté transaction", pratique pour les protocoles simples de type requête-réponse
+  - Il fournit des datagrammes utiles pour modeliser d'autres protocoles
+  - Il est simple, bon pour le bootstrapping _(Voir dans "UTILS" pour la définition)_, le DHCP et les protocoles simplifié de transfert de fichiers
+  
   
 ---
 
@@ -214,5 +227,13 @@ Il s'agit d'ajouter traduire du décimale au binaire puis d'inverser tout les bi
   
 #### > Attribution automatique :
   - Définit par le serveur DHCP
+
+---
+
+#### > Handshaking :
+  - Principe sur lequel deux entités entreprènes d'abbord une "négociation" avant une communication
+ 
+#### > Bootstrapping :
+  - Est un compilateur écrit dans son propre langage
 
 ---
