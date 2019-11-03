@@ -41,6 +41,8 @@
   | Classe D | 1110           | 224.0.0.0 | 239.255.255.255 |               | Non définie                       |
   | Classe E | 1111           | 240.0.0.0 | 255.255.255.255 |               | Non définie                       |
 
+---
+
 ##### > Adresse broadcast :
 Est une adresse par laquelle tout les appareils connectés au réseau peuvent recevoir des datagrames. Un message envoyé à une adresse broadcast peut-être reçu par tout les hôtes connectés au réseau.
 
