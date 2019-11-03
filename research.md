@@ -1,3 +1,4 @@
+## (Je n'ai pas encore corrigé les fautes d'orthographe divers)
 ### Général
 #### > IP (Internet protocol)
 - Identifie chaque appareil sur internet
