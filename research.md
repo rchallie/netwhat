@@ -73,18 +73,20 @@
 
 ---
 
-##### > Adresse broadcast :
+#### > Adresse broadcast :
 Est une adresse par laquelle tout les appareils connectés au réseau peuvent recevoir des datagrames. Un message envoyé à une adresse broadcast peut-être reçu par tout les hôtes connectés au réseau.
 
-##### > Différence entre IP privée et IP publique
+---
+
+#### > Différence entre IP privée et IP publique
   ##### - Privée :
   Ces adresses ne sont par sur Internet mais seulement sur réseau privés. Elles renforcent la sécurité car elles ne sont pas directement relié à Internet mais à un routeur, lui relié à Internet. Pour les entreprises etc. elle permet de communiquer sans consommer d'adresses Publique ainsi, deux entreprises différentes qui ne sont pas raccordés ensemble peuvent avoir le même addressage. Pour permettre à une adresse privée d'accéder à Internet, l'adresse doit être traduite en adresse publique appelé NAT _(Voir dans "UTILS" pour la définition et les types)_
   ##### - Publique :
-  Ces adresses permetes aux ordinateurs du réseau de communiquer entre eux sur internet. Ces adresses sont fournis par le FAI (fournisseur d'accès à Internet) au moment de l'installation et de la synchronisation de la box. Chaques adresses sont unique au monde, non comprise dans la partie privée.\
+  Ces adresses permetes aux ordinateurs du réseau de communiquer entre eux sur internet. Ces adresses sont fournis par le FAI (fournisseur d'accès à Internet) au moment de l'installation et de la synchronisation de la box. Chaques adresses sont unique au monde, non comprise dans la partie privée.
     
-  ##### Exceptions :\
-      - Le réseau 127.0.0.0 est réservé pour les tests de boucle local conne l'adresse IP 127.0.0.1 ("localhost") qui est une boucle local sur le PC.\
-      - Le réseau 0.0.0.0 est lui aussi réservé.
+  ##### Exceptions :
+  - Le réseau 127.0.0.0 est réservé pour les tests de boucle local conne l'adresse IP 127.0.0.1 ("localhost") qui est une boucle local sur le PC.\
+  - Le réseau 0.0.0.0 est lui aussi réservé.
 
 ---
 
@@ -134,23 +136,36 @@ _(Voir dans "UTILS" pour la liste des masques de sous réseau)_
 
 ---
 
-#### TCP : (Transmission Conctrol Protocol) (Dans la langue de Molière : Protocole de contrôle de transmission)
+### TCP : (Transmission Conctrol Protocol) (Dans la langue de Molière : Protocole de contrôle de transmission)
   Est un protocole de paquet fiable
   
-  ##### Fonctionnement :
-    - Etablissement de la connextion
-    - Transfert de données
-    - Fin de connexion
-  
-  ##### Connexion entre les appareils :
-  En règle général un système ouvre une 'socket' (point d'accès à une connexion TCP) et se met en attente passive de connexion d'un autre système. On appel ça l'ouverture passive, utilisé par le côté serveur de la connexion.
+#### > Fonctionnement :
+  - Etablissement de la connextion
+  - Transfert de données
+  - Fin de connexion
 
-  ##### Transferts de données : (sécurité)
-    - Les numéros de séquence sont utilisés pour ordonner les segments TCP reçus et détecter les données perdues
-    - Les sommes de contrôle permettents la détection d'erreur
-    - Les acquittements et les temporisations permettent la détection des segments perdue ou retardés
+#### > Connexion entre les appareils :
+En règle général un système ouvre une 'socket' (point d'accès à une connexion TCP) et se met en attente passive de connexion d'un autre système. On appel ça l'ouverture passive, utilisé par le côté serveur de la connexion.
+
+#### > Transferts de données : (sécurité)
+  - Les numéros de séquence sont utilisés pour ordonner les segments TCP reçus et détecter les données perdues
+  - Les sommes de contrôle permettents la détection d'erreur
+  - Les acquittements et les temporisations permettent la détection des segments perdue ou retardés
+   
    
 <p><a href="https://commons.wikimedia.org/wiki/File:Tcp_talk.svg#/media/Fichier:Tcp_talk.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Tcp_talk.svg/1200px-Tcp_talk.svg.png" alt="Tcp talk.svg"></a><br>Par <a href="//commons.wikimedia.org/w/index.php?title=User:Skc&amp;action=edit&amp;redlink=1" class="new" title="User:Skc (page does not exist)">Sébastien Koechlin</a> — <span class="int-own-work" lang="fr">Travail personnel</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=16887951">Lien</a></p>
+
+#### >  La somme de contrôle :
+Sur 16 bits, constituée par le complément à un de la somme complémentée à un de tout les éléments d'un segment TCP (en-tête et données) tout ça calculée par l'émeteur et inclus dans le segment émis. Puis est recalculée par le destinaire. Si elle correspond à la somme de contrôle reçue, on considère que le segment à été reçu intact et sans erreur.
+
+#### > Terminaison d'une connexion :
+Chaque et extrémité de la connexion effetue sa terminaison de manière indépendante
+
+#### > Alternative :
+Les applications multimédia (audio, vidéo), des jeux multi-joueurs en temps réel, l'échange de fichiers, etc n'ont pas besoin du TCP et peuvent même les limités car il est nécessaire de gérer les pertes et les erreurs plustôt que d'essayer de les éviter.
+  - UDP : est souvent utilisé pour le temps réel mais est moins fiable
+  - SCTP : comme le TCP, mais permettant la communications multi-cibles comme l'UDP
+  - MPTCP : surcouche de TCP, exploiter tous les chemins disponibles en parallèle, et donc améliorer significativement les performances et la fiabilité d'une connexion.
   
 ---
 
@@ -161,7 +176,7 @@ On connais la traduction d'un nombre décimale en binaire, en soustraillant des 
 192 = 2<sup>7</sup> + 2<sup>6</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 128 + 64\
 168 = 2<sup>7</sup> + 2<sup>5</sup> + 2<sup>3</sup> = 128 + 32 + 8\
 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 2<sup>0</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1\
-2 &nbsp;&nbsp;&nbsp;&nbsp;= 2<sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 2
+2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 2<sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 2
   > Tableau de convertion :\
   > On traduira : 192.168.1.2
 
