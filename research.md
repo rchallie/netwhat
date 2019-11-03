@@ -31,15 +31,26 @@
   - Commence toujours par la suite de bits 1111, donc compris entre 240 et 255.
   - Plage d'adresse de 240.0.0.0 à 255.255.255.255
   
+ > Les adresses privées entre les classes :
+ > - Classe A : 10.0.0.0 à 10.255.255.255
+ > - Classe B : 172.16.0.0 à 172.31.255.255
+ > - Classe C : 192.168.1.0 à 192.168.255.255
+  
 - Résumé :
 
-  | Classe   | Bits de départ | Début     | Fin             | Notation CIDR | Masque de sous réseau par défault |
-  | -------- | -------------- | --------- | --------------- | ------------- | --------------------------------- |
-  | Classe A | 0              | 0.0.0.0   | 127.255.255.255 | /8            | 255.0.0.0                         |
-  | Classe B | 10             | 128.0.0.0 | 191.255.255.255 | /16           | 255.255.0.0                       |
-  | Classe C | 110            | 192.0.0.0 | 223.255.255.255 | /24           | 255.255.255.0                     |
-  | Classe D | 1110           | 224.0.0.0 | 239.255.255.255 |               | Non définie                       |
-  | Classe E | 1111           | 240.0.0.0 | 255.255.255.255 |               | Non définie                       |
+  | Classe    | Bits de départ | Début     | Fin             | Notation CIDR | Masque de sous réseau par défault |
+  | --------- | -------------- | --------- | --------------- | ------------- | --------------------------------- |
+  | Classe A  | 0              | 0.0.0.0   | 127.255.255.255 | /8            | 255.0.0.0                         |
+  | Classe B  | 10             | 128.0.0.0 | 191.255.255.255 | /16           | 255.255.0.0                       |
+  | Classe C  | 110            | 192.0.0.0 | 223.255.255.255 | /24           | 255.255.255.0                     |
+  | Classe D  | 1110           | 224.0.0.0 | 239.255.255.255 |               | Non définie                       |
+  | Classe E  | 1111           | 240.0.0.0 | 255.255.255.255 |               | Non définie                       |
+  
+---
+
+#### > IPv4 et IPv6 :
+  - ##### IPv4: (Longueur de 32 bits soit 4 octets)
+    La plage d'attribution s'étend de 0.0.0.0 à 255.255.255.255. Elle est prémunie contre la pénuerie d'adresse par la norme RFC 1918. L'obtention d'une de ces adresses se fait soit par l'attribution statique ou automatique. _(Voir dans "UTILS" pour l'expliaction des deux thermes)_
 
 ---
 
@@ -138,5 +149,15 @@ Il s'agit d'ajouter traduire du décimale au binaire puis d'inverser tout les bi
   - statique : Correspondance un pour un établie entre les adresses local et gloable
   - dinamique : mappage de plusieurs adresses local vers plusieurs adresses gloables
   - traduction d'adresses de port (PAT) : mappages de plusieurs adresses locales et gloabales vers une seule. Cette méthode est également appelée "surcharge" (Surcharge NAT)
+
+---
+
+#### > Attribution statique :
+  - Définit par l'administrateur réseau
+  - Permet un bon contrôle mais à faire que sur des petites structure car sinon la surcharge de travail peut-être trop importante
+  - Utile pour les routeurs et les firewall
+  
+#### > Attribution automatique :
+  - Définit par le serveur DHCP
 
 ---
