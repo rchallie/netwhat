@@ -26,11 +26,33 @@
   - Un émeteur vers plusieurs récepteurs
   - Commence toujours par la suite de bits 1110, donc compris entre 224 et 239.
   - Plage d'adresse de 225.0.0.0 à 239.255.255.255
-- Classe D : (multicast)
+- Classe D : (IANA)
   - Réserver à l'IANA
   - Commence toujours par la suite de bits 1111, donc compris entre 240 et 255.
   - Plage d'adresse de 240.0.0.0 à 255.255.255.255
   
+- Résumé :
+
+  | Classe   | Bits de départ | Début     | Fin             | Notation CIDR | Masque de sous réseau par défault |
+  | -------- | -------------- | --------- | --------------- | ------------- | --------------------------------- |
+  | Classe A | 0              | 0.0.0.0   | 127.255.255.255 | /8            | 255.0.0.0                         |
+  | Classe B | 10             | 128.0.0.0 | 191.255.255.255 | /16           | 255.255.0.0                       |
+  | Classe C | 110            | 192.0.0.0 | 223.255.255.255 | /24           | 255.255.255.0                     |
+  | Classe D | 1110           | 224.0.0.0 | 239.255.255.255 |               | Non définie                       |
+  | Classe E | 1111           | 240.0.0.0 | 255.255.255.255 |               | Non définie                       |
+
+##### > Adresse broadcast :
+Est une adresse par laquelle tout les appareils connectés au réseau peuvent recevoir des datagrames. Un message envoyé à une adresse broadcast peut-être reçu par tout les hôtes connectés au réseau.
+
+##### > Différence entre IP privée et IP publique
+  ##### - Privée :
+  Ces adresses ne sont par sur Internet mais seulement sur réseau privés. Elles renforcent la sécurité car n'étant pas directement relié à Internet mais à un routeur, lui relié à Internet. Pour les entreprises etc. elle permet de communiquer sans consommer d'adresses Publique ainsi, deux entreprises différentes qui ne sont pas raccordés ensemble peuvent avoir le même addressage. Pour permettre à une adresse privée d'accéder à Internet, l'adresse doit être traduite en adresse publique appelé NAT _(Voir dans "UTILS" pour la définition et les types)_
+  ##### - Publique :
+  Ces adresses permetes aux ordinateurs du réseau de communiquer entre eux sur internet. Ces adresses sont fournis par le FAI (fournisseur d'accès à Internet) au moment de l'installation et de la synchronisation de la box. Chaques adresses sont unique au monde, non comprise dans la partie privée.\
+  Exceptions :\
+    - Le réseau 127.0.0.0 est réservé pour les tests de boucle local conne l'adresse IP 127.0.0.1 ("localhost") qui est une boucle local sur le PC.\
+    - Le réseau 0.0.0.0 est lui aussi réservé.
+
 ---
 
 #### > Masque de sous réseau
@@ -107,5 +129,12 @@ Il s'agit d'ajouter traduire du décimale au binaire puis d'inverser tout les bi
   > &nbsp;1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;. 1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;. 1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;1 1 . 0 0 0 0 0 0 0 0\
   > Deviens :\
   > &nbsp;0 0 0 0 0 0 0 0 . 0 0 0 0 0 0 0 0 . 0 0 0 0 0 0 0  . 1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;1 1
+
+---
+
+#### > NAT (Network Adresse Translation) : 
+  - statique : Correspondance un pour un établie entre les adresses local et gloable
+  - dinamique : mappage de plusieurs adresses local vers plusieurs adresses gloables
+  - traduction d'adresses de port (PAT) : mappages de plusieurs adresses locales et gloabales vers une seule. Cette méthode est également appelée "surcharge" (Surcharge NAT)
 
 ---
