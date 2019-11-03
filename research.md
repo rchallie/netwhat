@@ -1,5 +1,5 @@
-## (Je n'ai pas encore corrigé les fautes d'orthographe divers)
-### Général
+### (Je n'ai pas encore corrigé les fautes d'orthographe divers)
+## Général
 #### > IP (Internet protocol)
 - Identifie chaque appareil sur internet
 - Coder sur 4 octets (32 bits)
@@ -154,7 +154,7 @@ _(Voir dans "UTILS" pour la liste des masques de sous réseau)_
   
 ---
 
-### UTILS
+## UTILS
 #### > Convertion décimale vers binaire : 
 
 On connais la traduction d'un nombre décimale en binaire, en soustraillant des puissances de 2 à notre décimale:\
