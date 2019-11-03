@@ -152,7 +152,7 @@ En règle général un système ouvre une 'socket' (point d'accès à une connex
   - Les sommes de contrôle permettents la détection d'erreur
   - Les acquittements et les temporisations permettent la détection des segments perdue ou retardés
    
-   
+&nbsp;
 <p><a href="https://commons.wikimedia.org/wiki/File:Tcp_talk.svg#/media/Fichier:Tcp_talk.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Tcp_talk.svg/1200px-Tcp_talk.svg.png" alt="Tcp talk.svg"></a><br>Par <a href="//commons.wikimedia.org/w/index.php?title=User:Skc&amp;action=edit&amp;redlink=1" class="new" title="User:Skc (page does not exist)">Sébastien Koechlin</a> — <span class="int-own-work" lang="fr">Travail personnel</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=16887951">Lien</a></p>
 
 #### >  La somme de contrôle :
