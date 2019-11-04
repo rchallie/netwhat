@@ -74,7 +74,7 @@
 ---
 
 #### > Adresse broadcast :
-Est une adresse par laquelle tout les appareils connectés au réseau peuvent recevoir des datagrames. Un message envoyé à une adresse broadcast peut-être reçu par tout les hôtes connectés au réseau.
+Est une adresse par laquelle tout les appareils connectés au réseau peuvent recevoir des datagrames. Un message envoyé à une adresse broadcast peut-être reçu par tout les hôtes connectés au réseau. Elle est l'adresse IP la plus haut celon l'adresse réseau
 
 ---
 
