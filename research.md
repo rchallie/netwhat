@@ -39,7 +39,7 @@
   
 - Résumé :
 
-  | Classe    | Bits de départ | Début     | Fin             | Notation CIDR | Masque de sous réseau par défault |
+  | Classe    | Bits de départ | Début     | Fin             | CIDR (Masque) | Masque de sous réseau par défault |
   | --------- | -------------- | --------- | --------------- | ------------- | --------------------------------- |
   | Classe A  | 0              | 0.0.0.0   | 127.255.255.255 | /8            | 255.0.0.0                         |
   | Classe B  | 10             | 128.0.0.0 | 191.255.255.255 | /16           | 255.255.0.0                       |
@@ -168,6 +168,13 @@ Les applications multimédia (audio, vidéo), des jeux multi-joueurs en temps r�
   - SCTP : comme le TCP, mais permettant la communications multi-cibles comme l'UDP
   - MPTCP : surcouche de TCP, exploiter tous les chemins disponibles en parallèle, et donc améliorer significativement les performances et la fiabilité d'une connexion.
   
+#### > Le Modèle TCP/IP (Modèle internet):
+  Il utilise des couches réseau _(Voir dans "UTILS" pour la définition)_ :
+  1. Application
+  2. Transport
+  3. Internet
+  4. Accès réseau
+  
 ---
   
   ### > UDP : (User Datagram Protocol) (Protocole de datagramme utilisateur)
@@ -178,8 +185,45 @@ Les applications multimédia (audio, vidéo), des jeux multi-joueurs en temps r�
   - "Orienté transaction", pratique pour les protocoles simples de type requête-réponse
   - Il fournit des datagrammes utiles pour modeliser d'autres protocoles
   - Il est simple, bon pour le bootstrapping _(Voir dans "UTILS" pour la définition)_, le DHCP et les protocoles simplifié de transfert de fichiers
+  - Il est dit sans état, pratique pour le streaming (Télévision sur Tèl./Ordinateur)
+  - Absence de délai, pratique pour le temps réel (Chats Vocaux, jeux-vidéo etc.)
+  - Efficace pour des communications unidirectionnel
   
+---
+
+### Le Model OSI : (Open Systems Interconnection)
+  Est une norme de communication, en réseau, pour tout les sytèmes informatique, il à une architecture en couches _(Voir dans "UTILS" pour la définition)_\
+  Il est proposé par l'ISO (Internationel Organization for Standardization)
   
+<p><a href="https://commons.wikimedia.org/wiki/File:OSI_Model_v1.svg#/media/Fichier:OSI_Model_v1.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/OSI_Model_v1.svg/1200px-OSI_Model_v1.svg.png" alt="OSI Model v1.svg"></a><br>Par <a href="//commons.wikimedia.org/wiki/User:Offnfopt" title="User:Offnfopt">Offnfopt</a> — <span class="int-own-work" lang="fr">Travail personnel</span>, Domaine public, <a href="https://commons.wikimedia.org/w/index.php?curid=39917431">Lien</a></p>
+
+#### > Son architecture :
+
+|                     | PDU        | Couche          | Fonction                                                                  |
+| ------------------- | ---------- | --------------- | ------------------------------------------------------------------------- |
+| Couches hautes      | Donnée     | 7. Application  | Point d'accès aux services réseau                                         |
+|                     |            | 6. Présentation | Fait la conversion entre données manipulées ainsi que des octets transmis |
+|                     |            | 5.Session       | Gère la synchronisation entre les échanges, permet l'ouvert et la fermeture de la session | 
+|                     | Datagramme | 4. Transport    | Gère la communication de proche en proche, généralement entre machine : routage et adressage des paquets |
+| Couches matérielles | Paquet     | 3. Réseau       | Détermine le parcours des données et l'adressage logique (Adresse IP) |
+|                     | Trame      | 2. Liaison      | Gère la communication entre 2 machines directement connecter entre elles, ou par commutateur |
+|                     | Bit        | 1. Physique     | Gère la transmission des signauc entre les entités. Limité a l'émission et à la reception d'un bit ou d'un train de bit |
+
+#### > Divers :
+  - Pas forcement compatible avec la pile IP
+  - Le modèle OSI est connu pour ses fonctionnalités permettant de garantir une bonne qualité de service.
+  - Il est universelle, on retrouve ce modèle dans beaucoup de système, car il permet une meilleur organisation des normes par rapport au système applicatifs.
+  
+| Num | Couche       | Norme                                  |
+| --- | ------------ | -------------------------------------- |
+| 7   | Application  | Web                                    |
+| 6   | Présentation | HTML / XML                             |
+| 5   | Session      | HTTP / HTTPS                           |
+| 4   | Transport    | TCP                                    |
+| 3   | Réseau       | IP                                     |
+| 2   | Liaison      | Ethernet / xDSL                        |
+| 1   | Physique     | RJ45 / RJ11 / RJ12 / Cable cat. 5 et + |
+
 ---
 
 ## UTILS
@@ -201,6 +245,14 @@ On connais la traduction d'un nombre décimale en binaire, en soustraillant des 
 | 1                  | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   |
 | 2                  | 0   | 0   | 0   | 0   | 0   | 0   | 1   | 0   |
 
+---
+
+#### > Calcul du nombre d'hôte possible sur une adresse :
+  2<sup>32-CIDR(masque)</sup>-2
+  
+  > Ainsi pour un masque de 19, on obtient
+  > 2<sup>32-19</sup>-2 = 8190 hôtes possible
+  
 ---
 
 #### > Complément à un :
@@ -237,3 +289,6 @@ Il s'agit d'ajouter traduire du décimale au binaire puis d'inverser tout les bi
   - Est un compilateur écrit dans son propre langage
 
 ---
+
+#### > Les couches réseau :
+  - Fonctionnalités nécessaire à la communication et l'organisation des fonctions
