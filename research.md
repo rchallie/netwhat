@@ -228,6 +228,50 @@ Les applications multimédia (audio, vidéo), des jeux multi-joueurs en temps r�
 
 ---
 
+### > Serveur et protocole DHCP :
+  Est un service aui délivre des adresses IP aux ordinateurs qui se connecte au réseau
+  Le serveur vas délivrer un bail DHCP à l'ordinateur qui comprend :
+  - La durée de vie du bail (Libert l'adresse au bout d'un moment, si l'ordinateur est encore connecté il lui redonnera une nouvelle adresse IP. Ce systeme permet de faire tourner les adresses IP)
+  - Une adresse IP (Adresse dynamique : attribution statique)
+  - Et les paramètres réseau (Adresse passerelle, Adresse du DNS)
+
+---
+
+### > Serveur et protocole DNS :
+  Permet de traduire les noms de domaines en adress IP
+
+---
+
+### > Configuration minimale pour faire communiquer deux adresses en utilisant l'IP :
+  Ordinateur    ->   Paserelle   ->   Internet   ->   Passerelle   ->   Serveur\
+  172.18.3.82        172.18.0.253
+
+---
+
+### > Une passerelle :
+  Dispositif permettant de relier deux réseau inforatique, de type différents, ensemble :
+  - Répéteur          (niveau 1)
+  - Pont              (niveau 2)
+  - Relais / Routeur  (niveau 3)
+  
+  Une passerelle est plus communément appelé modem-routeur ou box, relie un réseau local à Internet. Elle sert également de pare-feu, de proxy, et effectue la qualité de service. Une passerelle par défaut est une passerelle qui gère le routage au niveau IP.
+
+---
+
+### Routage d'IP :
+  Selection des chemins, dans un réseau, par lesquel on vas faire acheminer les données, de l'expédieur vers le ou les destinataire(s).
+  
+---
+
+### Ports :
+
+  - 0 à 1023 : Controlé et assignés par l'IANA, appelé Well Known Ports
+  - 1024 à 49156 : Ports enregistrés
+  - 49152 à 65535 : Ports dynamique
+  
+  Une adresse IP + un port = un socket : Chemin par lequel transite des paquets
+
+---
 ## UTILS
 #### > Convertion décimale vers binaire : 
 
