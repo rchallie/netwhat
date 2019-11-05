@@ -138,6 +138,8 @@ _(Voir dans "UTILS" pour la liste des masques de sous réseau)_
 
 ### TCP : (Transmission Conctrol Protocol) (Dans la langue de Molière : Protocole de contrôle de transmission)
   Est un protocole de paquet fiable\
+  N'est pas orienté datagramme
+  Il prend en charge la diffusion (multicast)
   Il utilise un system de handshaking _(Voir dans "UTILS" pour la définition)_
   
 #### > Fonctionnement :
