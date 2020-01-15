@@ -1,4 +1,5 @@
 ### Gros merci à Mazoise (mchardin) pour la correction de l'ortographe 👌
+#### Leave a star :star2:
 ## Général
 #### > IP (Internet protocol)
 - Identifier chaque appareil sur internet
