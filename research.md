@@ -28,7 +28,7 @@
   - Un émetteur vers plusieurs récepteurs
   - Commence toujours par la suite de bits 1110, donc compris entre 224 et 239.
   - Plage d'adresse de 225.0.0.0 à 239.255.255.255
-- Classe D : (IANA)
+- Classe E : (IANA)
   - Réservé à l'IANA
   - Commence toujours par la suite de bits 1111, donc compris entre 240 et 255.
   - Plage d'adresse de 240.0.0.0 à 255.255.255.255
