@@ -1,5 +1,8 @@
 ### Gros merci à Mazoise (mchardin) pour la correction de l'ortographe 👌
 #### Abonne toi, lache un like, active la cloche tout ça tout ça :star2:
+
+### Russian : https://github.com/markveligod/netwhat
+
 ## Général
 #### > IP (Internet protocol)
 - Identifier chaque appareil sur internet
