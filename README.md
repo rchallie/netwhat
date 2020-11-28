@@ -7,7 +7,10 @@ Netwhat (42cursus) 2019-2020
 
 Others :
   - Russian : https://github.com/markveligod/netwhat
-  - English : https://github.com/edithturn/42-silicon-valley-netwhat<br/><br/>
+  - English : https://github.com/edithturn/42-silicon-valley-netwhat
+  
+Tools :
+  - Ip calculator : https://github.com/matboivin/netwhat-ip-calculator<br/><br/>
 [![forthebadge](https://forthebadge.com/images/badges/made-with-markdown.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
