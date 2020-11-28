@@ -8,6 +8,7 @@ Netwhat (42cursus) 2019-2020
 Others :
   - Russian : https://github.com/markveligod/netwhat
   - English : https://github.com/edithturn/42-silicon-valley-netwhat
+  - Japanese : https://github.com/ChoiKanghun/netwhat
   
 Tools :
   - Ip calculator : https://github.com/matboivin/netwhat-ip-calculator<br/><br/>
