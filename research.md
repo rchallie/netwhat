@@ -2,6 +2,8 @@
 #### Abonne toi, lache un like, active la cloche tout ça tout ça :star2:
 
 ### Russian : https://github.com/markveligod/netwhat
+### English : https://github.com/edithturn/42-silicon-valley-netwhat
+### Japanese : https://github.com/ChoiKanghun/netwhat
 
 ## Général
 #### > IP (Internet protocol)
@@ -105,7 +107,7 @@ Il permet de distinguer la partie de l'adresse utilisée pour le routage et cell
   > - 0 ET 0 = 0
   > - 1 ET 0 = 0
   > - 0 ET 1 = 0
-  > - 1 ET 1 = 0\
+  > - 1 ET 1 = 1\
   > \
   > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;168&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2\
   > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 1 0 0 0 0 0 0 . 1 0 1 0 1 0 0 0 . 0 0 0 0 0 0 0 1 . 0 0 0 0 0 0 1 0\
