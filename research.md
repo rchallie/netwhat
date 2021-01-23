@@ -3,7 +3,7 @@
 
 ### Russian : https://github.com/markveligod/netwhat
 ### English : https://github.com/edithturn/42-silicon-valley-netwhat
-### Japanese : https://github.com/ChoiKanghun/netwhat
+### Korean : https://github.com/ChoiKanghun/netwhat
 
 ## Général
 #### > IP (Internet protocol)
